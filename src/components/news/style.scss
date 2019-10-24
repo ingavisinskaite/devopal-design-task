@@ -1,0 +1,16 @@
+.NEWS {
+    margin: 0 170px;
+
+    &__container {
+        img {
+            display: inline-block;
+            width: 328px;
+        }
+
+        &__text {
+            display: inline-block;
+            width: 410px;
+            margin-left: 20px;
+        }
+    }
+}

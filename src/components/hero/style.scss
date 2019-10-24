@@ -1,0 +1,56 @@
+.HERO {
+    display: flex;
+    justify-content: center;
+    margin: 20px 170px;
+
+    &__news1 {
+        background: url("/hero1.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 628px;
+        height: 610px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 10px 20px;
+    }
+
+    &__sale1 {
+        background: url("/hero2.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 630px;
+        height: 300px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+
+    &__news2 {
+        background: url("/hero3.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 290px;
+        height: 282px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 10px 20px;
+    }
+
+    &__sale2 {
+        background: url("/hero4.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 290px;
+        height: 282px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+}

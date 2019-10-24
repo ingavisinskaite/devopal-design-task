@@ -1,0 +1,67 @@
+.HOME {
+    &__sale {
+        background-color: #fafafa;
+        margin-bottom: 20px;
+
+        &__title {
+            margin: 20px 170px;
+            color: red;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+
+            &__1 {
+                background: url("/hero4.jpg");
+                background-size: cover;
+                background-position: center;
+                width: 290px;
+                height: 282px;
+                border-radius: 5px;
+                color: white;
+                display: inline-block;
+                margin-right: 10px;
+                padding: 10px 20px;
+            }
+
+            &__2 {
+                background: url("/sale1.jpg");
+                background-size: cover;
+                background-position: center;
+                width: 290px;
+                height: 282px;
+                border-radius: 5px;
+                color: white;
+                display: inline-block;
+                margin-right: 10px;
+                padding: 10px 20px;
+            }
+
+            &__3 {
+                background: url("/hero2.jpg");
+                background-size: cover;
+                background-position: center;
+                width: 290px;
+                height: 282px;
+                border-radius: 5px;
+                color: white;
+                display: inline-block;
+                margin-right: 10px;
+                padding: 10px 20px;
+            }
+
+            &__4 {
+                background: url("/sale2.jpg");
+                background-size: cover;
+                background-position: center;
+                width: 290px;
+                height: 282px;
+                border-radius: 5px;
+                color: white;
+                display: inline-block;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

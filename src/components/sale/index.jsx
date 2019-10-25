@@ -9,7 +9,7 @@ const Sale = () => {
         <div className="HOME__sale__container">
           <div className="HOME__sale__container__1">
             <h2 className="HOME__sale__container__title">
-              Ieškanties labai pigių belaidžių ausinukų - akcijos "Xiaomi"
+              Ieškantiems labai pigių belaidžių ausinukų - akcijos "Xiaomi"
               įrenginių kolekcijai
             </h2>
           </div>

@@ -11,7 +11,12 @@ const Header = () => {
           </a>
         </div>
         <div className="HEADER__container__search">
-          <input type="text" placeholder="Paieška"></input>
+          <input
+            className="HEADER__container__search__input"
+            type="text"
+            placeholder="Paieška"
+          ></input>
+          <img src="/search-icon.png" alt=""></img>
         </div>
       </div>
       <div className="HEADER__navbar">
@@ -39,12 +44,22 @@ const Header = () => {
         <a href="/" className="HEADER__navbar-link">
           IŠMANIEJI TELEFONAI
         </a>
-        <a href="/">
-          <img alt="" src="/facebook.png"></img>
-        </a>
-        <a href="/">
-          <img alt="" src="/youtube.png"></img>
-        </a>
+        <div className="HEADER__navbar__icons">
+          <a href="/">
+            <img
+              alt=""
+              src="/facebook.png"
+              className="HEADER__navbar__icons-icon"
+            ></img>
+          </a>
+          <a href="/">
+            <img
+              alt=""
+              src="/youtube.png"
+              className="HEADER__navbar__icons-icon"
+            ></img>
+          </a>
+        </div>
       </div>
     </div>
   );

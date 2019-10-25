@@ -1,23 +1,41 @@
 .FOOTER {
+    &__logo-container {
+        flex: 15%;
+    }
+
     background-color: rgb(245, 245, 245);
-    padding: 20px 100px;
+    padding: 20px 170px;
     color: #7c7c7c;
     display: flex;
 
-    &__logo {
-        display: inline-block;
-    }
+
 
     &__info {
         display: inline-block;
+        flex: 70%;
+
+        &__link {
+            text-decoration: none;
+            color: gray;
+        }
     }
 
     &__media {
-        a {
-            display: inline-block;
+        display: flex;
+        flex: 15%;
+        justify-content: center;
+        align-items: center;
+
+        &__link {
             background-color: rgb(223, 222, 222);
-            border-radius: 10px;
-            padding: 5px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            margin-right: 7px;
+
+            &__icon {
+                transform: translate(50%, 50%);
+            }
         }
     }
 }

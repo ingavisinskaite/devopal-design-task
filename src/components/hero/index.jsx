@@ -5,35 +5,37 @@ const Hero = () => {
   return (
     <div className="HERO">
       <div className="HERO__news1">
-        <p>NAUJIENA</p>
-        <p>
+        <p className="HERO__type">NAUJIENA</p>
+        <h1 className="HERO__title">
           Galingiausias telefonas pasaulyje - pristatytas naujasis "Asus"
           flagmanas žaidimų mėgėjams
+        </h1>
+        <p className="HERO__author">
+          Paskelbė <strong> Lukas Snarskis </strong>
         </p>
-        <p>Paskelbė Lukas Snarskis</p>
       </div>
       <div>
         <div className="HERO__sale1">
-          <p>AKCIJA</p>
-          <p>
+          <p className="HERO__type">AKCIJA</p>
+          <h2 className="HERO__title">
             Apsiperkame Kinijoje #1 - išmaniųjų telefonų kuponai ir akcijos
             populiariausiose parduotuvėse
-          </p>
+          </h2>
         </div>
         <div>
           <div className="HERO__news2">
-            <p>NAUJIENA</p>
-            <p>
+            <p className="HERO__type">NAUJIENA</p>
+            <h2 className="HERO__title">
               "Oukitel" išleido "Redmi Note 7" konkurentą už itin patrauklią
               kainą
-            </p>
+            </h2>
           </div>
           <div className="HERO__sale2">
-            <p>AKCIJA</p>
-            <p>
+            <p className="HERO__type">AKCIJA</p>
+            <h2 className="HERO__title">
               Ieškantiems labai pigių belaidžių ausinukų - akcijos "Xiaomi"
               kolekcijai
-            </p>
+            </h2>
           </div>
         </div>
       </div>

@@ -1,7 +1,11 @@
 .NEWS {
-    margin: 0 170px;
+    margin-left: 170px;
+    display: inline-block;
 
     &__container {
+        display: flex;
+        margin-bottom: 20px;
+
         img {
             display: inline-block;
             width: 328px;

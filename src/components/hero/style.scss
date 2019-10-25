@@ -3,6 +3,22 @@
     justify-content: center;
     margin: 20px 170px;
 
+    &__title {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    &__type {
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    &__author {
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+    }
+
     &__news1 {
         background: url("/hero1.jpg");
         background-size: cover;
@@ -14,10 +30,11 @@
         display: inline-block;
         margin-right: 10px;
         padding: 10px 20px;
+        position: relative;
     }
 
     &__sale1 {
-        background: url("/hero2.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero2.jpg");
         background-size: cover;
         background-position: center;
         width: 630px;
@@ -27,10 +44,11 @@
         display: inline-block;
         margin-bottom: 10px;
         padding: 10px 20px;
+        position: relative;
     }
 
     &__news2 {
-        background: url("/hero3.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero3.jpg");
         background-size: cover;
         background-position: center;
         width: 290px;
@@ -40,10 +58,11 @@
         display: inline-block;
         margin-right: 10px;
         padding: 10px 20px;
+        position: relative;
     }
 
     &__sale2 {
-        background: url("/hero4.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero4.jpg");
         background-size: cover;
         background-position: center;
         width: 290px;
@@ -52,5 +71,6 @@
         color: white;
         display: inline-block;
         padding: 10px 20px;
+        position: relative;
     }
 }

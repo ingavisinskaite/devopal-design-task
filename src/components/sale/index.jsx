@@ -8,28 +8,28 @@ const Sale = () => {
         <p className="HOME__sale__title">TOP AKCIJOS</p>
         <div className="HOME__sale__container">
           <div className="HOME__sale__container__1">
-            <p>
+            <h2 className="HOME__sale__container__title">
               Ieškanties labai pigių belaidžių ausinukų - akcijos "Xiaomi"
               įrenginių kolekcijai
-            </p>
+            </h2>
           </div>
           <div className="HOME__sale__container__2">
-            <p>
+            <h2 className="HOME__sale__container__title">
               Puiki proga įsigyti el. pasipirtuką - dabar "Xiaomi M365 Pro" už
               itin žemą kainą ir be jokių mokesčių
-            </p>
+            </h2>
           </div>
           <div className="HOME__sale__container__3">
-            <p>
+            <h2 className="HOME__sale__container__title">
               Apsiperkame Kinijoje #1 - išmaniųjų telefonų kuponai ir akcijos
               populiariausiose parduotuvėse
-            </p>
+            </h2>
           </div>
           <div className="HOME__sale__container__4">
-            <p>
+            <h2 className="HOME__sale__container__title">
               Ieškantiems išmaniojo laikrodžio ar apyrankės - trys pigūs
               vasariški pasirinkimai
-            </p>
+            </h2>
           </div>
         </div>
       </div>

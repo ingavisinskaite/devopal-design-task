@@ -12,8 +12,13 @@
             padding: 3px;
         }
 
+        &__title {
+            position: absolute;
+            bottom: 20px;
+        }
+
         &__1 {
-            background: url("/review1.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review1.jpg");
             background-size: cover;
             background-position: center;
             width: 290px;
@@ -23,10 +28,11 @@
             display: inline-block;
             margin-right: 10px;
             padding: 10px 20px;
+            position: relative;
         }
 
         &__2 {
-            background: url("/review2.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review2.jpg");
             background-size: cover;
             background-position: center;
             width: 290px;
@@ -36,10 +42,11 @@
             display: inline-block;
             margin-right: 10px;
             padding: 10px 20px;
+            position: relative;
         }
 
         &__3 {
-            background: url("/review3.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review3.jpg");
             background-size: cover;
             background-position: center;
             width: 290px;
@@ -49,10 +56,11 @@
             display: inline-block;
             margin-right: 10px;
             padding: 10px 20px;
+            position: relative;
         }
 
         &__4 {
-            background: url("/review4.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review4.jpg");
             background-size: cover;
             background-position: center;
             width: 290px;
@@ -61,6 +69,7 @@
             color: white;
             display: inline-block;
             padding: 10px 20px;
+            position: relative;
         }
     }
 }

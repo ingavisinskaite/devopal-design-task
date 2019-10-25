@@ -1,5 +1,23 @@
 .FOOTER {
-    background-color: #dfdfdf;
+    background-color: rgb(245, 245, 245);
     padding: 20px 100px;
     color: #7c7c7c;
+    display: flex;
+
+    &__logo {
+        display: inline-block;
+    }
+
+    &__info {
+        display: inline-block;
+    }
+
+    &__media {
+        a {
+            display: inline-block;
+            background-color: rgb(223, 222, 222);
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
 }

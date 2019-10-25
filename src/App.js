@@ -14,8 +14,10 @@ function App() {
       <Header />
       <Hero />
       <Reviews />
-      <News />
-      <MobilePhones />
+      <div className="container">
+        <News />
+        <MobilePhones />
+      </div>
       <Sale />
       <Footer />
     </div>

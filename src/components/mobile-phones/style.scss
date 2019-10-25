@@ -1,0 +1,41 @@
+.MOBILE-PHONES {
+    display: inline-block;
+    background-color: white;
+    width: 20%;
+    height: 400px;
+    margin-right: 170px;
+    margin-top: 16px;
+    padding: 20px;
+
+    &__title {
+        margin-bottom: 20px;
+
+        &-new {
+            background-color: #15c6b8;
+            color: white;
+            border-radius: 3px;
+            padding: 2px;
+            font-size: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    &__phones {
+
+        &-phone {
+
+            &__img {
+                width: 60px;
+                display: inline-block;
+            }
+
+            &__info {
+                display: inline-block;
+            }
+
+            &__price {
+                color: #15c6b8;
+            }
+        }
+    }
+}

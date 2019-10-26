@@ -1,7 +1,26 @@
 import React from "react";
 import "./style.scss";
 
+const MenuLink = props => (
+  <div className="HEADER__navbar__link-container">
+    <a href="/" className="HEADER__navbar__link-container__link">
+      {props.link}
+    </a>
+  </div>
+);
+
 const Header = () => {
+  let links = [
+    "PRADINIS",
+    "NAUJIENOS",
+    "AKCIJOS",
+    "APŽVALGOS",
+    "STRAIPSNIAI",
+    "PATARIMAI",
+    "NUOMONĖS",
+    " IŠMANIEJI TELEFONAI"
+  ];
+
   return (
     <div className="HEADER">
       <div className="HEADER__container">
@@ -20,30 +39,10 @@ const Header = () => {
         </div>
       </div>
       <div className="HEADER__navbar">
-        <a href="/" className="HEADER__navbar-link">
-          PRADINIS
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          NAUJIENOS
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          AKCIJOS
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          APŽVALGOS
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          STRAIPSNIAI
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          PATARIMAI
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          NUOMONĖS
-        </a>
-        <a href="/" className="HEADER__navbar-link">
-          IŠMANIEJI TELEFONAI
-        </a>
+        {links.map(l => {
+          return <MenuLink link={l} />;
+        })}
+
         <div className="HEADER__navbar__icons">
           <a href="/">
             <img

@@ -23,6 +23,8 @@
     &__phones {
 
         &-phone {
+            display: flex;
+            align-items: center;
 
             &__img {
                 width: 60px;
@@ -31,6 +33,10 @@
 
             &__info {
                 display: inline-block;
+
+                &__title {
+                    margin: 5px 0;
+                }
             }
 
             &__price {

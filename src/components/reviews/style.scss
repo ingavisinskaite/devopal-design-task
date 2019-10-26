@@ -5,22 +5,7 @@
         display: flex;
         justify-content: center;
 
-        &__rating {
-            background-color: #15c6b8;
-            width: 80px;
-            border-radius: 3px;
-            padding: 3px;
-        }
-
-        &__title {
-            position: absolute;
-            bottom: 20px;
-        }
-
-        &__1 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review1.jpg");
-            background-size: cover;
-            background-position: center;
+        &__review {
             width: 290px;
             height: 282px;
             border-radius: 5px;
@@ -29,47 +14,18 @@
             margin-right: 10px;
             padding: 10px 20px;
             position: relative;
-        }
 
-        &__2 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review2.jpg");
-            background-size: cover;
-            background-position: center;
-            width: 290px;
-            height: 282px;
-            border-radius: 5px;
-            color: white;
-            display: inline-block;
-            margin-right: 10px;
-            padding: 10px 20px;
-            position: relative;
-        }
+            &__title {
+                position: absolute;
+                bottom: 20px;
+            }
 
-        &__3 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review3.jpg");
-            background-size: cover;
-            background-position: center;
-            width: 290px;
-            height: 282px;
-            border-radius: 5px;
-            color: white;
-            display: inline-block;
-            margin-right: 10px;
-            padding: 10px 20px;
-            position: relative;
-        }
-
-        &__4 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/review4.jpg");
-            background-size: cover;
-            background-position: center;
-            width: 290px;
-            height: 282px;
-            border-radius: 5px;
-            color: white;
-            display: inline-block;
-            padding: 10px 20px;
-            position: relative;
+            &__rating {
+                background-color: #15c6b8;
+                width: 80px;
+                border-radius: 3px;
+                padding: 3px;
+            }
         }
     }
 }

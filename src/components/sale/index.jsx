@@ -1,40 +1,78 @@
 import React from "react";
 import "./style.scss";
+import ReactSwipe from "react-swipe";
 
-const Sale = () => {
+const SaleAd = props => (
+  <div
+    className="SALE__swiper__container__ad"
+    style={{
+      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./${props.imgUrl}.jpg')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}
+  >
+    <h2 className="SALE__swiper__container__ad__title">{props.text}</h2>
+  </div>
+);
+
+const SaleSwiper = () => {
+  let reactSwipeEl;
+
+  let sales = [
+    {
+      imgUrl: "hero4",
+      text:
+        'Ieškantiems labai pigių belaidžių ausinukų - akcijos "Xiaomi" įrenginių kolekcijai'
+    },
+    {
+      imgUrl: "sale1",
+      text:
+        'Puiki proga įsigyti el. pasipirtuką - dabar "Xiaomi M365 Pro" už itin žemą kainą ir be jokių mokesčių'
+    },
+    {
+      imgUrl: "hero2",
+      text:
+        "Apsiperkame Kinijoje #1 - išmaniųjų telefonų kuponai ir akcijos populiariausiose parduotuvėse"
+    },
+    {
+      imgUrl: "sale2",
+      text:
+        "Ieškantiems išmaniojo laikrodžio ar apyrankės - trys pigūs vasariški pasirinkimai"
+    }
+  ];
+
+  let saleAds = sales.map(s => {
+    return <SaleAd imgUrl={s.imgUrl} text={s.text} />;
+  });
+
   return (
-    <div className="HOME">
-      <div className="HOME__sale">
-        <p className="HOME__sale__title">TOP AKCIJOS</p>
-        <div className="HOME__sale__container">
-          <div className="HOME__sale__container__1">
-            <h2 className="HOME__sale__container__title">
-              Ieškantiems labai pigių belaidžių ausinukų - akcijos "Xiaomi"
-              įrenginių kolekcijai
-            </h2>
-          </div>
-          <div className="HOME__sale__container__2">
-            <h2 className="HOME__sale__container__title">
-              Puiki proga įsigyti el. pasipirtuką - dabar "Xiaomi M365 Pro" už
-              itin žemą kainą ir be jokių mokesčių
-            </h2>
-          </div>
-          <div className="HOME__sale__container__3">
-            <h2 className="HOME__sale__container__title">
-              Apsiperkame Kinijoje #1 - išmaniųjų telefonų kuponai ir akcijos
-              populiariausiose parduotuvėse
-            </h2>
-          </div>
-          <div className="HOME__sale__container__4">
-            <h2 className="HOME__sale__container__title">
-              Ieškantiems išmaniojo laikrodžio ar apyrankės - trys pigūs
-              vasariški pasirinkimai
-            </h2>
-          </div>
-        </div>
+    <div className="SALE">
+      <p className="SALE__title">TOP AKCIJOS</p>
+
+      <div className="SALE__swiper">
+        <button
+          className="SALE__swiper__button"
+          onClick={() => reactSwipeEl.prev()}
+        >
+          <img src="/back.png" alt=""></img>
+        </button>
+        <ReactSwipe
+          swipeOptions={{ continuous: true }}
+          ref={el => (reactSwipeEl = el)}
+        >
+          <div className="SALE__swiper__container">{saleAds}</div>
+          <div className="SALE__swiper__container">{saleAds}</div>
+          <div className="SALE__swiper__container">{saleAds}</div>
+        </ReactSwipe>
+        <button
+          className="SALE__swiper__button"
+          onClick={() => reactSwipeEl.next()}
+        >
+          <img src="/next.png" alt=""></img>
+        </button>
       </div>
     </div>
   );
 };
 
-export default Sale;
+export default SaleSwiper;

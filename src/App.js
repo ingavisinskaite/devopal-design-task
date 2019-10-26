@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Sale from './components/sale';
+import SaleSwiper from './components/sale';
 import Footer from './components/footer';
 import Header from './components/header';
 import Hero from './components/hero';
@@ -18,7 +18,7 @@ function App() {
         <News />
         <MobilePhones />
       </div>
-      <Sale />
+      <SaleSwiper />
       <Footer />
     </div>
   );

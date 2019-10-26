@@ -1,12 +1,24 @@
-.HOME {
-    &__sale {
-        background-color: rgb(250, 250, 250);
-        margin-bottom: 20px;
-        padding: 10px 0;
+.SALE {
+    background-color: rgb(250, 250, 250);
+    margin-bottom: 20px;
+    padding: 10px 0;
 
-        &__title {
-            margin: 20px 170px;
-            color: red;
+    &__title {
+        margin: 20px 170px;
+        color: red;
+    }
+
+    &__swiper {
+        display: flex;
+
+        &__button {
+            background-color: transparent;
+            border: none;
+            filter: opacity(30%);
+        }
+
+        &__button:focus {
+            outline: none;
         }
 
         &__container {
@@ -14,13 +26,8 @@
             justify-content: center;
             padding-bottom: 30px;
 
-            &__title {
-                position: absolute;
-                bottom: 20px;
-            }
-
-            &__1 {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero4.jpg");
+            &__ad {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
                 background-size: cover;
                 background-position: center;
                 width: 290px;
@@ -31,47 +38,11 @@
                 margin-right: 10px;
                 padding: 10px 20px;
                 position: relative;
-            }
 
-            &__2 {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/sale1.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 290px;
-                height: 282px;
-                border-radius: 5px;
-                color: white;
-                display: inline-block;
-                margin-right: 10px;
-                padding: 10px 20px;
-                position: relative;
-            }
-
-            &__3 {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero2.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 290px;
-                height: 282px;
-                border-radius: 5px;
-                color: white;
-                display: inline-block;
-                margin-right: 10px;
-                padding: 10px 20px;
-                position: relative;
-            }
-
-            &__4 {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/sale2.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 290px;
-                height: 282px;
-                border-radius: 5px;
-                color: white;
-                display: inline-block;
-                padding: 10px 20px;
-                position: relative;
+                &__title {
+                    position: absolute;
+                    bottom: 20px;
+                }
             }
         }
     }

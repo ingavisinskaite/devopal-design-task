@@ -1,0 +1,11 @@
+$break-tablet: 768px;
+
+.NEWSPHONES {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 170px;
+
+    @media screen and (max-width: $break-tablet) {
+        margin: 0 100px;
+    }
+}

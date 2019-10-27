@@ -1,3 +1,5 @@
+$break-tablet: 768px;
+
 .NEWSPHONES__mobile-phones {
     display: inline-block;
     background-color: white;
@@ -6,8 +8,17 @@
     margin-top: 16px;
     padding: 20px;
 
+    @media screen and (max-width: $break-tablet) {
+        width: 26%;
+        height: 320px;
+    }
+
     &__title {
         margin-bottom: 20px;
+
+        @media screen and (max-width: $break-tablet) {
+            font-size: 14px;
+        }
 
         &-new {
             background-color: #15c6b8;
@@ -28,10 +39,18 @@
             &__img {
                 width: 60px;
                 display: inline-block;
+
+                @media screen and (max-width: $break-tablet) {
+                    width: 40px;
+                }
             }
 
             &__info {
                 display: inline-block;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 12px;
+                }
 
                 &__title {
                     margin: 5px 0;

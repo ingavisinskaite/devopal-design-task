@@ -11,7 +11,7 @@ const Review = props => (
     }}
   >
     <p className="REVIEWS__container__review__rating">{props.rating}</p>
-    <h2 className="REVIEWS__container__review__title">{props.title}</h2>
+    <p className="REVIEWS__container__review__title">{props.title}</p>
   </div>
 );
 

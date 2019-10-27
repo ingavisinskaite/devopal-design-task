@@ -11,7 +11,7 @@ const SaleAd = props => (
       backgroundPosition: "center"
     }}
   >
-    <h2 className="SALE__swiper__container__ad__title">{props.text}</h2>
+    <p className="SALE__swiper__container__ad__title">{props.text}</p>
   </div>
 );
 

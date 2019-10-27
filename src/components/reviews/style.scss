@@ -1,5 +1,11 @@
+$break-tablet: 768px;
+
 .REVIEWS {
     margin: 20px 170px;
+
+    @media screen and (max-width: $break-tablet) {
+        margin: 10px 100px;
+    }
 
     &__container {
         display: flex;
@@ -15,9 +21,22 @@
             padding: 10px 20px;
             position: relative;
 
+            @media screen and (max-width: $break-tablet) {
+                width: 122px;
+                height: 142px;
+                margin-right: 5px;
+                padding: 5px 10px;
+            }
+
             &__title {
                 position: absolute;
                 bottom: 20px;
+                font-size: 30px;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 15px;
+                    bottom: 10px;
+                }
             }
 
             &__rating {
@@ -25,6 +44,11 @@
                 width: 80px;
                 border-radius: 3px;
                 padding: 3px;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 12px;
+                    width: 60px;
+                }
             }
         }
     }

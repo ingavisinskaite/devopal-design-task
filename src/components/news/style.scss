@@ -1,19 +1,32 @@
+$break-tablet: 768px;
+
 .NEWSPHONES__news {
     display: inline-block;
 
     &__container {
         display: flex;
+        align-items: center;
         margin-bottom: 20px;
 
-        img {
+        &__image {
             display: inline-block;
             width: 328px;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 140px;
+                height: 110px;
+            }
         }
 
         &__text {
             display: inline-block;
             width: 410px;
             margin-left: 20px;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 10px;
+                width: 205px;
+            }
         }
     }
 }

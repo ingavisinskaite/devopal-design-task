@@ -6,7 +6,7 @@ $break-tablet: 768px;
     margin: 20px 170px;
 
     @media screen and (max-width: $break-tablet) {
-        margin: 0 100px;
+        margin: 10px 100px;
     }
 
     &__post {
@@ -28,7 +28,7 @@ $break-tablet: 768px;
             font-size: 30px;
 
             @media screen and (max-width: $break-tablet) {
-                font-size: 18px;
+                font-size: 15px;
                 bottom: 12px;
             }
         }
@@ -51,6 +51,7 @@ $break-tablet: 768px;
         &-big {
             width: 628px;
             height: 610px;
+            font-size: 18px;
 
             @media screen and (max-width: $break-tablet) {
                 width: 300px;
@@ -64,7 +65,7 @@ $break-tablet: 768px;
             margin-bottom: 10px;
 
             @media screen and (max-width: $break-tablet) {
-                width: 300px;
+                width: 270px;
                 height: 143px;
                 margin-bottom: 5px;
             }
@@ -75,7 +76,7 @@ $break-tablet: 768px;
             height: 282px;
 
             @media screen and (max-width: $break-tablet) {
-                width: 137px;
+                width: 122px;
                 height: 142px;
             }
         }

@@ -4,8 +4,12 @@ import "./style.scss";
 const Footer = () => {
   return (
     <div className="FOOTER">
-      <div>
-        <img src="./logo-footer.jpg" alt=""></img>
+      <div className="FOOTER__logo-container">
+        <img
+          className="FOOTER__logo-container__logo"
+          src="./logo-footer.jpg"
+          alt=""
+        ></img>
       </div>
       <div className="FOOTER__info">
         <p>

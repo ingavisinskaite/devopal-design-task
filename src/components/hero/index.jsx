@@ -11,7 +11,7 @@ const Post = props => (
     }}
   >
     <p className="HERO__post__type">{props.type}</p>
-    <h1 className="HERO__post__title">{props.title}</h1>
+    <p className="HERO__post__title">{props.title}</p>
     {props.author && (
       <p className="HERO__post__author">
         Paskelbė <strong>{props.author}</strong>

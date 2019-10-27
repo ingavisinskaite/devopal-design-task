@@ -1,7 +1,13 @@
+$break-tablet: 768px;
+
 .HERO {
     display: flex;
     justify-content: center;
     margin: 20px 170px;
+
+    @media screen and (max-width: $break-tablet) {
+        margin: 0 100px;
+    }
 
     &__post {
         border-radius: 5px;
@@ -11,9 +17,20 @@
         padding: 10px 20px;
         position: relative;
 
+        @media screen and (max-width: $break-tablet) {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+
         &__title {
             position: absolute;
-            bottom: 30px;
+            bottom: 20px;
+            font-size: 30px;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 18px;
+                bottom: 12px;
+            }
         }
 
         &__type {
@@ -25,22 +42,42 @@
             position: absolute;
             bottom: 0;
             font-size: 14px;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 12px;
+            }
         }
 
         &-big {
             width: 628px;
             height: 610px;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 300px;
+                height: 300px;
+            }
         }
 
         &-medium {
             width: 630px;
             height: 300px;
             margin-bottom: 10px;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 300px;
+                height: 143px;
+                margin-bottom: 5px;
+            }
         }
 
         &-small {
             width: 290px;
             height: 282px;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 137px;
+                height: 142px;
+            }
         }
     }
 }

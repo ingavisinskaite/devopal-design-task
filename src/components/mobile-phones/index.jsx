@@ -2,20 +2,20 @@ import React from "react";
 import "./style.scss";
 
 const MobilePhone = props => (
-  <div className="MOBILE-PHONES__phones-phone">
+  <div className="NEWSPHONES__mobile-phones__phones-phone">
     <div>
       <img
-        className="MOBILE-PHONES__phones-phone__img"
+        className="NEWSPHONES__mobile-phones__phones-phone__img"
         src={`/${props.src}.jpg`}
         alt=""
       ></img>
     </div>
-    <div className="MOBILE-PHONES__phones-phone__info">
-      <p className="MOBILE-PHONES__phones-phone__info__title">
+    <div className="NEWSPHONES__mobile-phones__phones-phone__info">
+      <p className="NEWSPHONES__mobile-phones__phones-phone__info__title">
         <strong>{props.title}</strong>
       </p>
       <span>kaina nuo </span>
-      <span className="MOBILE-PHONES__phones-phone__price">
+      <span className="NEWSPHONES__mobile-phones__phones-phone__price">
         <strong>{props.price}</strong>
       </span>
     </div>
@@ -24,12 +24,12 @@ const MobilePhone = props => (
 
 const MobilePhones = () => {
   return (
-    <div className="MOBILE-PHONES">
-      <div className="MOBILE-PHONES__title">
-        <span className="MOBILE-PHONES__title-new">NEW</span>
+    <div className="NEWSPHONES__mobile-phones">
+      <div className="NEWSPHONES__mobile-phones__title">
+        <span className="NEWSPHONES__mobile-phones__title-new">NEW</span>
         <span>NAUJAUSI TELEFONAI</span>
       </div>
-      <div className="MOBILE-PHONES__phones">
+      <div className="NEWSPHONES__mobile-phones__phones">
         <MobilePhone title="Xiaomi Mi A3" price="264,38 €" src="phone1" />
         <hr></hr>
         <MobilePhone title="Xiaomi Mi 9T" price="289,63 €" src="phone2" />

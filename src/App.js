@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Hero />
       <Reviews />
-      <div className="container">
+      <div className="NEWSPHONES">
         <News />
         <MobilePhones />
       </div>

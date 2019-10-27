@@ -2,9 +2,9 @@ import React from "react";
 import "./style.scss";
 
 const New = props => (
-  <div className="NEWS__container">
+  <div className="NEWSPHONES__news__container">
     <img src="./news.jpg" alt=""></img>
-    <div className="NEWS__container__text">
+    <div className="NEWSPHONES__news__container__text">
       <h3>{props.title}</h3>
       <p>{props.text}</p>
       <p>{props.footer}</p>
@@ -12,7 +12,7 @@ const New = props => (
   </div>
 );
 
-const News = () => {
+const NEWSPHONES__news = () => {
   let post = (
     <New
       title="Tyrimas: mobiliojo banko paslaugomis pasitiki kas trečias žmogus"
@@ -21,7 +21,7 @@ const News = () => {
     />
   );
   return (
-    <div className="NEWS">
+    <div className="NEWSPHONES__news">
       <p>NAUJIENOS</p>
       {post}
       {post}
@@ -29,4 +29,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default NEWSPHONES__news;

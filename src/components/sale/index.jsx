@@ -2,6 +2,19 @@ import React from "react";
 import "./style.scss";
 import ReactSwipe from "react-swipe";
 
+function useWindowWidth() {
+  const [size, setSize] = React.useState(0);
+  React.useLayoutEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 const SaleAd = props => (
   <div
     className="SALE__swiper__container__ad"
@@ -16,7 +29,12 @@ const SaleAd = props => (
 );
 
 const SaleSwiper = () => {
+  const width = useWindowWidth();
   let reactSwipeEl;
+
+  React.useEffect(() => {
+    reactSwipeEl.swipe.setup();
+  }, [reactSwipeEl]);
 
   let sales = [
     {
@@ -49,6 +67,7 @@ const SaleSwiper = () => {
     <div className="SALE">
       <p className="SALE__title">TOP AKCIJOS</p>
 
+      {width}
       <div className="SALE__swiper">
         <button
           className="SALE__swiper__button"
@@ -56,14 +75,33 @@ const SaleSwiper = () => {
         >
           <img src="/back.png" alt=""></img>
         </button>
-        <ReactSwipe
-          swipeOptions={{ continuous: true }}
-          ref={el => (reactSwipeEl = el)}
-        >
-          <div className="SALE__swiper__container">{saleAds}</div>
-          <div className="SALE__swiper__container">{saleAds}</div>
-          <div className="SALE__swiper__container">{saleAds}</div>
-        </ReactSwipe>
+
+        {width > 426 ? (
+          <ReactSwipe
+            swipeOptions={{ continuous: true }}
+            ref={el => (reactSwipeEl = el)}
+          >
+            <div className="SALE__swiper__container">{saleAds}</div>
+            <div className="SALE__swiper__container">{saleAds}</div>
+            <div className="SALE__swiper__container">{saleAds}</div>
+          </ReactSwipe>
+        ) : (
+          <ReactSwipe
+            swipeOptions={{ continuous: true }}
+            ref={el => (reactSwipeEl = el)}
+          >
+            <div>
+              <SaleAd />
+            </div>
+            <div>
+              <SaleAd />
+            </div>
+            <div>
+              <SaleAd />
+            </div>
+          </ReactSwipe>
+        )}
+
         <button
           className="SALE__swiper__button"
           onClick={() => reactSwipeEl.next()}

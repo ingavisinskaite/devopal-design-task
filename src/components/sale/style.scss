@@ -1,4 +1,4 @@
-$break-tablet: 768px;
+@import '../../utilities/variables';
 
 .SALE {
     background-color: rgb(250, 250, 250);
@@ -11,6 +11,10 @@ $break-tablet: 768px;
 
         @media screen and (max-width: $break-tablet) {
             margin: 10px 100px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin: 10px 50px;
         }
     }
 

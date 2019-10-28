@@ -1,5 +1,5 @@
-$break-tablet: 768px;
-$break-mobile: 426px;
+@import "../../utilities/variables";
+
 $post-padding-width: 20px;
 $post-margin-right: 10px;
 $post-big-width: 500px;
@@ -35,6 +35,10 @@ $post-big-width: 500px;
     @media screen and (max-width: $break-tablet) {
       margin-right: 5px;
       padding: 5px 10px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+      padding: 10px 20px;
     }
 
     &__title {
@@ -80,7 +84,7 @@ $post-big-width: 500px;
       }
 
       @media screen and (max-width: $break-mobile) {
-        width: $post-big-width / 2;
+        width: $post-width-mobile;
         height: 300px;
       }
     }
@@ -98,7 +102,7 @@ $post-big-width: 500px;
       }
 
       @media screen and (max-width: $break-mobile) {
-        width: $post-big-width / 2;
+        width: $post-width-mobile;
         margin-bottom: 5px;
       }
     }
@@ -113,9 +117,8 @@ $post-big-width: 500px;
       }
 
       @media screen and (max-width: $break-mobile) {
-        width: $post-big-width / 2;
+        width: $post-width-mobile;
         margin-top: 10px;
-        padding: 10px 20px;
       }
     }
   }

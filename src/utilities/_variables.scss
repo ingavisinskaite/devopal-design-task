@@ -1,0 +1,5 @@
+$break-tablet: 768px;
+$break-mobile: 426px;
+$page-margin-mobile: 50px;
+$padding-width-mobile: 20px;
+$post-width-mobile: ($break-mobile - 1) - (2 * $page-margin-mobile) - (2 * $padding-width-mobile);

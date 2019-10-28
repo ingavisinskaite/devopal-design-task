@@ -1,5 +1,4 @@
-$break-tablet: 768px;
-$break-mobile: 426px;
+@import "../../utilities/variables";
 
 .NEWSPHONES__news {
     display: inline-block;
@@ -22,7 +21,10 @@ $break-mobile: 426px;
                 height: 110px;
             }
 
-
+            @media screen and (max-width: $break-mobile) {
+                width: $post-width-mobile + 40px;
+                height: 162px;
+            }
         }
 
         &__text {

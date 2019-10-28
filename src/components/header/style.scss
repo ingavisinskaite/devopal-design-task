@@ -1,5 +1,4 @@
-$break-tablet: 768px;
-$break-mobile: 426px;
+@import "../../utilities/variables";
 
 .HEADER {
   background-color: white;
@@ -16,6 +15,10 @@ $break-mobile: 426px;
       border-radius: 12px;
       padding: 10px;
       display: flex;
+
+      @media screen and (max-width: $break-mobile) {
+        display: none;
+      }
 
       &__input {
         border: none;

@@ -1,4 +1,4 @@
-$break-tablet: 768px;
+@import '../../utilities/variables';
 
 .FOOTER {
     background-color: rgb(245, 245, 245);
@@ -10,13 +10,22 @@ $break-tablet: 768px;
         padding: 10px 100px;
     }
 
+    @media screen and (max-width: $break-mobile) {
+        padding: 10px 50px;
+    }
+
     &__logo-container {
         flex: 15%;
+
+        @media screen and (max-width: $break-mobile) {
+            display: none;
+        }
 
         &__logo {
             @media screen and (max-width: $break-tablet) {
                 width: 80px;
             }
+
         }
     }
 
@@ -28,9 +37,19 @@ $break-tablet: 768px;
             font-size: 12px;
         }
 
+        &__break {
+            @media screen and (max-width: $break-mobile) {
+                display: none;
+            }
+        }
+
         &__link {
             text-decoration: none;
             color: gray;
+
+            @media screen and (max-width: $break-mobile) {
+                display: none;
+            }
         }
     }
 
@@ -39,6 +58,10 @@ $break-tablet: 768px;
         flex: 15%;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: $break-mobile) {
+            display: none;
+        }
 
         &__link {
             background-color: rgb(223, 222, 222);

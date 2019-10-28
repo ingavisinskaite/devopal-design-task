@@ -18,7 +18,7 @@ const Footer = () => {
           sutikimo yra draudžiama. Pranešimai spaudai ir kita -
           press@telefonai.eu
         </p>
-        <hr></hr>
+        <hr className="FOOTER__info__break"></hr>
         <a className="FOOTER__info__link" href="/">
           Apie mus /{" "}
         </a>

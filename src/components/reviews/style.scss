@@ -1,5 +1,4 @@
-$break-tablet: 768px;
-$break-mobile: 426px;
+@import "../../utilities/variables";
 
 .REVIEWS {
   margin: 20px 170px;
@@ -38,8 +37,10 @@ $break-mobile: 426px;
       }
 
       @media screen and (max-width: $break-mobile) {
-        width: 100%;
+        width: $post-width-mobile;
         margin-top: 10px;
+        padding: 10px 20px;
+        margin-right: 0;
       }
 
       &__title {

@@ -1,103 +1,121 @@
 $break-tablet: 768px;
-$column-width: 550px;
+$break-mobile: 426px;
 $post-padding-width: 20px;
 $post-margin-right: 10px;
+$post-big-width: 500px;
 
 .HERO {
   display: flex;
   margin: 20px 170px;
-  flex-wrap: wrap;
+  margin-top: 10px; //https://stackoverflow.com/questions/30887071/margin-top-only-when-the-flex-item-is-wrapped, taikau su medium ir big
+  justify-content: space-evenly;
 
   @media screen and (max-width: $break-tablet) {
     margin: 0 100px;
   }
 
+  @media screen and (max-width: $break-mobile) {
+    margin: 0 50px;
+    flex-wrap: wrap;
+  }
+
   &__small-row {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__post {
     border-radius: 5px;
     color: white;
     display: inline-block;
-    margin-right: $post-margin-right;
-    padding: 10px $post-padding-width;
+    margin-right: 10px;
+    padding: 10px 20px;
     position: relative;
 
     @media screen and (max-width: $break-tablet) {
-      margin: 10px 100px;
+      margin-right: 5px;
+      padding: 5px 10px;
     }
 
-    &__post {
-      border-radius: 5px;
-      color: white;
-      display: inline-block;
-      margin-right: 10px;
-      padding: 10px 20px;
-      position: relative;
+    &__title {
+      position: absolute;
+      bottom: 20px;
+      font-size: 30px;
 
       @media screen and (max-width: $break-tablet) {
-        padding: 5px 10px;
-        margin-right: 5px;
+        font-size: 15px;
+        bottom: 16px;
       }
 
-      &__title {
-        position: absolute;
-        bottom: 20px;
-        font-size: 30px;
-
-        @media screen and (max-width: $break-tablet) {
-          font-size: 15px;
-          bottom: 12px;
-        }
+      @media screen and (max-width: $break-mobile) {
+        font-size: 20px;
+        bottom: 15px;
       }
+    }
 
-      &__type {
-        letter-spacing: 2px;
+    &__type {
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    &__author {
+      position: absolute;
+      bottom: 0;
+      font-size: 14px;
+
+      @media screen and (max-width: $break-tablet) {
         font-size: 12px;
       }
+    }
 
-      &__author {
-        position: absolute;
-        bottom: 0;
-        font-size: 14px;
+    &-big {
+      width: $post-big-width;
+      height: 610px;
+      font-size: 18px;
+      margin-top: 10px;
 
-        @media screen and (max-width: $break-tablet) {
-          font-size: 12px;
-        }
+      @media screen and (max-width: $break-tablet) {
+        width: 260px;
+        height: 303px;
       }
 
-      &-big {
-        width: 628px;
-        height: 610px;
-        font-size: 18px;
-
-        @media screen and (max-width: $break-tablet) {
-          width: 300px;
-          height: 300px;
-        }
-      }
-
-      &-medium {
-        width: 630px;
+      @media screen and (max-width: $break-mobile) {
+        width: $post-big-width / 2;
         height: 300px;
-        margin-bottom: 10px;
+      }
+    }
 
-        @media screen and (max-width: $break-tablet) {
-          width: 270px;
-          height: 143px;
-          margin-bottom: 5px;
-        }
+    &-medium {
+      width: $post-big-width;
+      height: 300px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      @media screen and (max-width: $break-tablet) {
+        width: 260px;
+        height: 146px;
+        margin-bottom: 5px;
       }
 
-      &-small {
-        width: 290px;
-        height: 282px;
+      @media screen and (max-width: $break-mobile) {
+        width: $post-big-width / 2;
+        margin-bottom: 5px;
+      }
+    }
 
-        @media screen and (max-width: $break-tablet) {
-          width: 122px;
-          height: 142px;
-        }
+    &-small {
+      width: (($post-big-width + ($post-padding-width)) / 2) - ($post-padding-width * 2) + ($post-margin-right / 2);
+      height: 282px;
+
+      @media screen and (max-width: $break-tablet) {
+        width: 117px;
+        height: 142px;
+      }
+
+      @media screen and (max-width: $break-mobile) {
+        width: $post-big-width / 2;
+        margin-top: 10px;
+        padding: 10px 20px;
       }
     }
   }

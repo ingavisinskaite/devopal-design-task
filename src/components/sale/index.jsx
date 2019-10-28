@@ -41,8 +41,8 @@ const SaleSwiper = () => {
     }
   ];
 
-  let saleAds = sales.map(s => {
-    return <SaleAd imgUrl={s.imgUrl} text={s.text} />;
+  let saleAds = sales.map((s, index) => {
+    return <SaleAd imgUrl={s.imgUrl} text={s.text} key={index} />;
   });
 
   return (

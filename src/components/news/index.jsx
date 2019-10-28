@@ -3,11 +3,14 @@ import "./style.scss";
 
 const New = props => (
   <div className="NEWSPHONES__news__container">
-    <img
-      className="NEWSPHONES__news__container__image"
-      src="./news.jpg"
-      alt=""
-    ></img>
+    <div>
+      <img
+        className="NEWSPHONES__news__container__image"
+        src="./news.jpg"
+        alt=""
+      ></img>
+    </div>
+
     <div className="NEWSPHONES__news__container__text">
       <h3>{props.title}</h3>
       <p>{props.text}</p>

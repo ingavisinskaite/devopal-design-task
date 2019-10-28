@@ -1,15 +1,33 @@
 import React from "react";
 import "./style.scss";
 
+function useWindowWidth() {
+  const [size, setSize] = React.useState(0);
+  React.useLayoutEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 const MenuLink = props => (
-  <div className="HEADER__navbar__link-container">
-    <a href="/" className="HEADER__navbar__link-container__link">
-      {props.link}
+  <div className="HEADER__navbar__menu__link-container">
+    <a href="/" className="HEADER__navbar__menu__link-container__link">
+      {props.screenWidth <= 768 ? (
+        <img src={`/${props.link}.png`} alt=""></img>
+      ) : (
+        props.link
+      )}
     </a>
   </div>
 );
 
 const Header = () => {
+  const width = useWindowWidth();
   let links = [
     "PRADINIS",
     "NAUJIENOS",
@@ -18,7 +36,7 @@ const Header = () => {
     "STRAIPSNIAI",
     "PATARIMAI",
     "NUOMONĖS",
-    " IŠMANIEJI TELEFONAI"
+    "IŠMANIEJI TELEFONAI"
   ];
 
   return (
@@ -39,9 +57,11 @@ const Header = () => {
         </div>
       </div>
       <div className="HEADER__navbar">
-        {links.map(l => {
-          return <MenuLink link={l} />;
-        })}
+        <div className="HEADER__navbar__menu">
+          {links.map((l, index) => {
+            return <MenuLink link={l} screenWidth={width} key={index} />;
+          })}
+        </div>
 
         <div className="HEADER__navbar__icons">
           <a href="/">

@@ -1,4 +1,5 @@
 $break-tablet: 768px;
+$break-mobile: 426px;
 
 .NEWSPHONES__news {
     display: inline-block;
@@ -8,14 +9,20 @@ $break-tablet: 768px;
         align-items: center;
         margin-bottom: 20px;
 
+        @media screen and (max-width: $break-mobile) {
+            flex-wrap: wrap;
+        }
+
         &__image {
             display: inline-block;
-            width: 328px;
+            width: 265px;
 
             @media screen and (max-width: $break-tablet) {
-                width: 140px;
+                width: 137px;
                 height: 110px;
             }
+
+
         }
 
         &__text {
@@ -26,6 +33,11 @@ $break-tablet: 768px;
             @media screen and (max-width: $break-tablet) {
                 font-size: 10px;
                 width: 205px;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                margin-left: 0;
+                width: auto;
             }
         }
     }

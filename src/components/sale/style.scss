@@ -16,11 +16,16 @@ $break-tablet: 768px;
 
     &__swiper {
         display: flex;
+        justify-content: center;
 
         &__button {
             background-color: transparent;
             border: none;
             filter: opacity(30%);
+
+            @media screen and (max-width: $break-tablet) {
+                margin: 0 12px;
+            }
         }
 
         &__button:focus {
@@ -29,14 +34,13 @@ $break-tablet: 768px;
 
         &__container {
             display: flex;
-            justify-content: center;
             padding-bottom: 30px;
 
             &__ad {
                 background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
                 background-size: cover;
                 background-position: center;
-                width: 290px;
+                width: 225px;
                 height: 282px;
                 border-radius: 5px;
                 color: white;
@@ -46,7 +50,7 @@ $break-tablet: 768px;
                 position: relative;
 
                 @media screen and (max-width: $break-tablet) {
-                    width: 122px;
+                    width: 117px;
                     height: 142px;
                     margin-right: 5px;
                     padding: 5px 10px;

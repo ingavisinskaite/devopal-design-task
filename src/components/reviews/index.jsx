@@ -39,8 +39,10 @@ const Reviews = () => {
     }
   ];
 
-  let reviews = reviewsInfo.map(r => {
-    return <Review imgUrl={r.imgUrl} rating={r.rating} title={r.title} />;
+  let reviews = reviewsInfo.map((r, index) => {
+    return (
+      <Review imgUrl={r.imgUrl} rating={r.rating} title={r.title} key={index} />
+    );
   });
 
   return (

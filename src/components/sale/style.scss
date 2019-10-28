@@ -22,6 +22,7 @@ $break-tablet: 768px;
             background-color: transparent;
             border: none;
             filter: opacity(30%);
+            margin: 0 47px;
 
             @media screen and (max-width: $break-tablet) {
                 margin: 0 12px;
@@ -59,7 +60,7 @@ $break-tablet: 768px;
                 &__title {
                     position: absolute;
                     bottom: 20px;
-                    font-size: 30px;
+                    font-size: 26px;
 
                     @media screen and (max-width: $break-tablet) {
                         font-size: 15px;

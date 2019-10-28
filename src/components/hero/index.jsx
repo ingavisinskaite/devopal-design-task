@@ -52,12 +52,20 @@ const Hero = () => {
 
   return (
     <div className="HERO">
-      <Post {...heroInfo[0]} />
       <div>
-        <Post {...heroInfo[1]} />
+        <Post {...heroInfo[0]} />
+      </div>
+      <div>
         <div>
-          <Post {...heroInfo[2]} />
-          <Post {...heroInfo[3]} />
+          <Post {...heroInfo[1]} />
+        </div>
+        <div className="HERO__small-row">
+          <div>
+            <Post {...heroInfo[2]} />
+          </div>
+          <div>
+            <Post {...heroInfo[3]} />
+          </div>
         </div>
       </div>
     </div>

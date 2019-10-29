@@ -1,5 +1,11 @@
-$break-tablet: 768px;
 $break-mobile: 426px;
 $page-margin-mobile: 50px;
 $padding-width-mobile: 20px;
 $post-width-mobile: ($break-mobile - 1) - (2 * $page-margin-mobile) - (2 * $padding-width-mobile);
+
+$break-tablet: 769px;
+$post-big-width-tablet: 260px;
+$page-margin-tablet: 100px;
+$padding-width-tablet: 10px;
+$post-margin-tablet: 5px;
+$post-width-tablet: (($break-tablet - 1) - (2 * $page-margin-tablet) - (8 * $padding-width_tablet) - (4 * $post-margin-tablet)) / 4;

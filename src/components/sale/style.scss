@@ -55,14 +55,14 @@
                 position: relative;
 
                 @media screen and (max-width: $break-tablet) {
-                    width: 117px;
+                    width: $post-width-tablet;
                     height: 142px;
                     margin-right: 5px;
                     padding: 5px 10px;
                 }
 
                 @media screen and (max-width: $break-mobile) {
-                    width: $post-width-mobile - 100px;
+                    width: $post-width-mobile - 120px;
                     padding: 10px 20px;
                 }
 

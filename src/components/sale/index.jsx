@@ -66,8 +66,6 @@ const SaleSwiper = () => {
   return (
     <div className="SALE">
       <p className="SALE__title">TOP AKCIJOS</p>
-
-      {width}
       <div className="SALE__swiper">
         <button
           className="SALE__swiper__button"
@@ -91,13 +89,16 @@ const SaleSwiper = () => {
             ref={el => (reactSwipeEl = el)}
           >
             <div>
-              <SaleAd />
+              <SaleAd imgUrl={sales[0].imgUrl} text={sales[0].text} />
             </div>
             <div>
-              <SaleAd />
+              <SaleAd imgUrl={sales[1].imgUrl} text={sales[1].text} />
             </div>
             <div>
-              <SaleAd />
+              <SaleAd imgUrl={sales[2].imgUrl} text={sales[2].text} />
+            </div>
+            <div>
+              <SaleAd imgUrl={sales[3].imgUrl} text={sales[3].text} />
             </div>
           </ReactSwipe>
         )}

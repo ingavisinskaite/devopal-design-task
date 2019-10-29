@@ -61,6 +61,11 @@
                     padding: 5px 10px;
                 }
 
+                @media screen and (max-width: $break-mobile) {
+                    width: $post-width-mobile - 100px;
+                    padding: 10px 20px;
+                }
+
                 &__title {
                     position: absolute;
                     bottom: 20px;

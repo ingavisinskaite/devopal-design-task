@@ -23,6 +23,29 @@ const MenuLink = props => (
   </div>
 );
 
+const Search = () => {
+  return (
+    <div className="HEADER__container__search">
+      <input
+        className="HEADER__container__search__input"
+        type="text"
+        placeholder="Paieška"
+      ></input>
+      <img src="/search-icon.png" alt=""></img>
+    </div>
+  );
+};
+
+const Logo = () => {
+  return (
+    <div className="HEADER__container__logo">
+      <a href="/">
+        <img alt="" src="/logo-header.jpg"></img>
+      </a>
+    </div>
+  );
+};
+
 const Header = () => {
   const width = useWindowWidth();
   let links = [
@@ -39,19 +62,8 @@ const Header = () => {
   return (
     <div className="HEADER">
       <div className="HEADER__container">
-        <div className="HEADER__container__logo">
-          <a href="/">
-            <img alt="" src="/logo-header.jpg"></img>
-          </a>
-        </div>
-        <div className="HEADER__container__search">
-          <input
-            className="HEADER__container__search__input"
-            type="text"
-            placeholder="Paieška"
-          ></input>
-          <img src="/search-icon.png" alt=""></img>
-        </div>
+        <Logo />
+        <Search />
       </div>
       <div className="HEADER__navbar">
         {width > 769 ? (
@@ -63,23 +75,12 @@ const Header = () => {
         ) : (
           <div>
             <Menu>
-              <div className="HEADER__container__search">
-                <input
-                  className="HEADER__container__search__input"
-                  type="text"
-                  placeholder="Paieška"
-                ></input>
-                <img src="/search-icon.png" alt=""></img>
-              </div>
+              <Search />
               {links.map((l, index) => {
                 return <MenuLink link={l} key={index} />;
               })}
             </Menu>
-            <div className="HEADER__container__logo">
-              <a href="/">
-                <img alt="" src="/logo-header.jpg"></img>
-              </a>
-            </div>
+            <Logo />
           </div>
         )}
 

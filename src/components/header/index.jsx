@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import { bubble as Menu } from "react-burger-menu";
 
 function useWindowWidth() {
   const [size, setSize] = React.useState(0);
@@ -17,11 +18,7 @@ function useWindowWidth() {
 const MenuLink = props => (
   <div className="HEADER__navbar__menu__link-container">
     <a href="/" className="HEADER__navbar__menu__link-container__link">
-      {props.screenWidth <= 768 ? (
-        <img src={`/${props.link}.png`} alt=""></img>
-      ) : (
-        props.link
-      )}
+      {props.link}
     </a>
   </div>
 );
@@ -57,11 +54,26 @@ const Header = () => {
         </div>
       </div>
       <div className="HEADER__navbar">
-        <div className="HEADER__navbar__menu">
-          {links.map((l, index) => {
-            return <MenuLink link={l} screenWidth={width} key={index} />;
-          })}
-        </div>
+        {width > 769 ? (
+          <div className="HEADER__navbar__menu">
+            {links.map((l, index) => {
+              return <MenuLink link={l} key={index} />;
+            })}
+          </div>
+        ) : (
+          <div>
+            <Menu>
+              {links.map((l, index) => {
+                return <MenuLink link={l} key={index} />;
+              })}
+            </Menu>
+            <div className="HEADER__container__logo">
+              <a href="/">
+                <img alt="" src="/logo-header.jpg"></img>
+              </a>
+            </div>
+          </div>
+        )}
 
         <div className="HEADER__navbar__icons">
           <a href="/">

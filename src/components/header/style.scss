@@ -92,7 +92,17 @@
 
         @media screen and (max-width: $break-tablet) {
           padding-top: 0;
+        }
+      }
 
+      &__link-container:nth-child(1) {
+        border-bottom: 3px solid white;
+        padding-top: 3px;
+      }
+
+      &__link-container:nth-child(2) {
+        @media screen and (max-width: $break-tablet) {
+          border-bottom: 3px solid white;
         }
       }
     }

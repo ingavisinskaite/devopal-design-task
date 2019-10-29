@@ -63,6 +63,14 @@ const Header = () => {
         ) : (
           <div>
             <Menu>
+              <div className="HEADER__container__search">
+                <input
+                  className="HEADER__container__search__input"
+                  type="text"
+                  placeholder="Paieška"
+                ></input>
+                <img src="/search-icon.png" alt=""></img>
+              </div>
               {links.map((l, index) => {
                 return <MenuLink link={l} key={index} />;
               })}

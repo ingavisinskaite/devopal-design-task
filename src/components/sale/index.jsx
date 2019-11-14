@@ -74,7 +74,7 @@ const SaleSwiper = () => {
           <img src="/back.png" alt=""></img>
         </button>
 
-        {width > 426 ? (
+        {width > 550 ? (
           <ReactSwipe
             swipeOptions={{ continuous: true }}
             ref={el => (reactSwipeEl = el)}

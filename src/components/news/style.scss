@@ -1,45 +1,28 @@
 @import "../../utilities/variables";
 
-.NEWSPHONES__news {
-    display: inline-block;
-
-    &__container {
+.NEWSPHONES {
+    &__news {
         display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+        flex-direction: column;
+        flex: 2;
 
-        @media screen and (max-width: $break-mobile) {
-            flex-wrap: wrap;
+        @media screen and (max-width: 750px) {
+            flex: 1 0 100%;
         }
 
-        &__image {
-            display: inline-block;
-            width: 265px;
+        &__container {
+            display: flex;
+            align-items: center;
 
-            @media screen and (max-width: $break-tablet) {
-                width: $post-width-tablet + (2 * $padding-width-tablet);
-                height: 110px;
+            @media screen and (max-width: 550px) {
+                flex-direction: column;
+                align-items: baseline;
+                align-items: center;
+                text-align: center;
             }
 
-            @media screen and (max-width: $break-mobile) {
-                width: $post-width-mobile + (2 * $padding-width-mobile);
-                height: 162px;
-            }
-        }
-
-        &__text {
-            display: inline-block;
-            width: 410px;
-            margin-left: 20px;
-
-            @media screen and (max-width: $break-tablet) {
-                font-size: 10px;
-                width: 205px;
-            }
-
-            @media screen and (max-width: $break-mobile) {
-                margin-left: 0;
-                width: auto;
+            &__image {
+                margin-right: 10px;
             }
         }
     }

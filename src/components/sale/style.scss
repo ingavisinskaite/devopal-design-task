@@ -1,82 +1,72 @@
-@import '../../utilities/variables';
+@import "../../utilities/variables";
 
 .SALE {
     background-color: rgb(250, 250, 250);
-    margin-bottom: 20px;
+    margin: 20px 0;
     padding: 10px 0;
 
     &__title {
-        margin: 20px 170px;
+        max-width: 1200px;
+        margin: 10px auto;
         color: red;
-
-        @media screen and (max-width: $break-tablet) {
-            margin: 10px 100px;
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            margin: 10px 50px;
-        }
     }
 
     &__swiper {
         display: flex;
-        justify-content: center;
-
-        &__button {
-            background-color: transparent;
-            border: none;
-            filter: opacity(30%);
-            margin: 0 47px;
-
-            @media screen and (max-width: $break-tablet) {
-                margin: 0 12px;
-            }
-        }
-
-        &__button:focus {
-            outline: none;
-        }
+        max-width: 1352px;
+        margin: 0 auto;
 
         &__container {
             display: flex;
-            padding-bottom: 30px;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-wrap: wrap;
+            }
 
             &__ad {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                background-size: cover;
-                background-position: center;
-                width: 225px;
-                height: 282px;
-                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                flex: 2;
                 color: white;
-                display: inline-block;
+                border-radius: 5px;
                 margin-right: 10px;
                 padding: 10px 20px;
-                position: relative;
 
                 @media screen and (max-width: $break-tablet) {
-                    width: $post-width-tablet;
-                    height: 142px;
-                    margin-right: 5px;
-                    padding: 5px 10px;
-                }
-
-                @media screen and (max-width: $break-mobile) {
-                    width: $post-width-mobile - 120px;
-                    padding: 10px 20px;
+                    flex: 2 0 38%;
+                    margin-bottom: 10px;
                 }
 
                 &__title {
-                    position: absolute;
-                    bottom: 20px;
-                    font-size: 26px;
+                    font-size: 2vw;
+
 
                     @media screen and (max-width: $break-tablet) {
-                        font-size: 15px;
-                        bottom: 0;
+                        font-size: 3vw;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        font-size: 3.8vw;
                     }
                 }
             }
+
+            &__ad:last-child {
+                margin-right: 0;
+            }
+
+            &__ad:nth-child(2) {
+                @media screen and (max-width: $break-tablet) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__button {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            filter: opacity(30%);
         }
     }
 }

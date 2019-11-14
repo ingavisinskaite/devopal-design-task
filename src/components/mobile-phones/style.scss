@@ -1,80 +1,60 @@
-@import '../../utilities/variables';
+@import "../../utilities/variables";
 
-.NEWSPHONES__mobile-phones {
-  display: inline-block;
-  background-color: white;
-  height: 400px;
-  margin-top: 16px;
-  padding: 20px;
-
-  @media screen and (max-width: $break-tablet) {
-    height: 320px;
-    padding: 0;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  &__title {
-    margin-bottom: 20px;
-
-    @media screen and (max-width: $break-tablet) {
-      font-size: 14px;
-    }
-
-    &-new {
-      background-color: #15c6b8;
-      color: white;
-      border-radius: 3px;
-      padding: 2px;
-      font-size: 10px;
-      margin-right: 10px;
-    }
-  }
-
-  &__phones {
-    @media screen and (max-width: $break-tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      hr {
-        display: none;
-      }
-    }
-
-    &-phone {
-      display: flex;
-      align-items: center;
-
-      @media screen and (max-width: $break-tablet) {
+.NEWSPHONES {
+    &__mobile-phones {
         display: flex;
-        flex: 0 50%;
-      }
-
-      &__img {
-        width: 60px;
-        display: inline-block;
-
-        @media screen and (max-width: $break-tablet) {
-          width: 40px;
-        }
-      }
-
-      &__info {
-        display: inline-block;
-
-        @media screen and (max-width: $break-tablet) {
-          font-size: 12px;
-        }
+        flex-direction: column;
+        flex: 1;
 
         &__title {
-          margin: 5px 0;
-        }
-      }
+            margin: 16px 0;
 
-      &__price {
-        color: #15c6b8;
-      }
+            &-new {
+                background-color: #15c6b8;
+                color: white;
+                border-radius: 3px;
+                padding: 2px;
+                font-size: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        &__phones {
+            display: flex;
+            flex-direction: column;
+
+
+            @media screen and (max-width: 945px) {
+                flex-direction: row;
+            }
+
+            @media screen and (max-width: 750px) {
+                flex-wrap: wrap;
+            }
+
+            &-phone {
+                display: flex;
+                align-items: center;
+                flex: 1;
+
+                @media screen and (max-width: 945px) {
+                    flex: 1 0 21%;
+                }
+
+                @media screen and (max-width: 750px) {
+                    flex: 1 0 42%;
+                }
+
+                &__img {
+                    max-width: 80px;
+                }
+            }
+
+            &__break {
+                @media screen and (max-width: 750px) {
+                    display: none;
+                }
+            }
+        }
     }
-  }
 }

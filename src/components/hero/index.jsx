@@ -11,12 +11,14 @@ const Post = props => (
     }}
   >
     <p className="HERO__post__type">{props.type}</p>
-    <p className="HERO__post__title">{props.title}</p>
-    {props.author && (
-      <p className="HERO__post__author">
-        Paskelbė <strong>{props.author}</strong>
-      </p>
-    )}
+    <div>
+      <p className="HERO__post__title">{props.title}</p>
+      {props.author && (
+        <p className="HERO__post__author">
+          Paskelbė <strong>{props.author}</strong>
+        </p>
+      )}
+    </div>
   </div>
 );
 
@@ -52,18 +54,18 @@ const Hero = () => {
 
   return (
     <div className="HERO">
-      <div>
+      <div className="HERO__col-1">
         <Post {...heroInfo[0]} />
       </div>
-      <div>
+      <div className="HERO__col-2">
         <div>
           <Post {...heroInfo[1]} />
         </div>
         <div className="HERO__small-row">
-          <div>
+          <div className="HERO__small-row__col-1">
             <Post {...heroInfo[2]} />
           </div>
-          <div>
+          <div className="HERO__small-row__col-2">
             <Post {...heroInfo[3]} />
           </div>
         </div>

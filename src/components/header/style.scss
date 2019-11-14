@@ -53,20 +53,22 @@
     display: flex;
     height: 50px;
     justify-content: space-between;
-    align-items: stretch;
 
     @media screen and (max-width: $break-tablet) {
-      padding-left: 0;
       background: none;
       height: 70px;
     }
 
     &__menu {
       display: flex;
-      flex: 9;
+      flex: 18;
       justify-content: space-evenly;
-      max-width: 1200px;
+      max-width: 1120px;
       margin: 0 auto;
+
+      @media screen and (max-width: 1000px) {
+        flex: 14;
+      }
 
       @media screen and (max-width: $break-tablet) {
         font-size: 12px;
@@ -80,6 +82,10 @@
         &__link {
           text-decoration: none;
           color: white;
+
+          @media screen and (max-width: 1000px) {
+            font-size: 14px;
+          }
 
           @media screen and (max-width: $break-tablet) {
             padding: 12px 5px;
@@ -110,6 +116,7 @@
 
     &__icons {
       flex: 1;
+      max-width: 80px;
 
       @media screen and (max-width: $break-tablet) {
         display: none;

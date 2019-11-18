@@ -16,6 +16,10 @@
     &__logo {
       margin-left: 74px;
       margin-top: 10px;
+
+      img {
+        width: 100%;
+      }
     }
 
     &__search {
@@ -57,6 +61,7 @@
     @media screen and (max-width: $break-tablet) {
       background: none;
       height: 70px;
+      align-items: center;
     }
 
     &__menu {

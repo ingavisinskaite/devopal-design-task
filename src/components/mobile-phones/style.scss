@@ -36,6 +36,7 @@
                 display: flex;
                 align-items: center;
                 flex: 1;
+                cursor: pointer;
 
                 @media screen and (max-width: 945px) {
                     flex: 1 0 21%;
@@ -48,6 +49,15 @@
                 &__img {
                     max-width: 80px;
                 }
+
+            }
+
+            &-phone:hover {
+                background-color: rgb(250, 250, 250);
+            }
+
+            &-phone:hover img {
+                opacity: 0.8;
             }
 
             &__break {

@@ -82,3 +82,19 @@
         }
     }
 }
+
+.react-swipe-container {
+    max-width: 85%;
+
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+        width: 75%;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        width: 60%;
+    }
+}

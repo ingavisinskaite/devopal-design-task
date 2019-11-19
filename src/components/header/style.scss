@@ -28,6 +28,7 @@
       border-radius: 12px;
       padding: 10px;
       display: flex;
+      cursor: pointer;
 
       @media screen and (max-width: $break-tablet) {
         background-color: white;

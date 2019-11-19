@@ -76,7 +76,10 @@ const SaleSwiper = () => {
 
         {width > 768 ? (
           <ReactSwipe
-            swipeOptions={{ continuous: true }}
+            swipeOptions={{
+              speed: 1500,
+              continuous: true
+            }}
             ref={el => (reactSwipeEl = el)}
           >
             <div className="SALE__swiper__container">{saleAds}</div>

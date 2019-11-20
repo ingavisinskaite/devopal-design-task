@@ -50,10 +50,10 @@
 
 
                     @media screen and (max-width: $break-tablet) {
-                        font-size: 3vw;
+                        font-size: 4vw;
                     }
 
-                    @media screen and (max-width: 550px) {
+                    @media screen and (max-width: $break-mobile) {
                         font-size: 3.8vw;
                     }
                 }
@@ -79,6 +79,11 @@
             background-color: transparent;
             border: none;
             filter: opacity(30%);
+            cursor: pointer;
+        }
+
+        &__button:focus {
+            outline: none;
         }
     }
 }

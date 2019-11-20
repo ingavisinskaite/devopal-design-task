@@ -28,7 +28,7 @@
                 flex-direction: row;
             }
 
-            @media screen and (max-width: 750px) {
+            @media screen and (max-width: $break-tablet) {
                 flex-wrap: wrap;
             }
 
@@ -42,7 +42,7 @@
                     flex: 1 0 21%;
                 }
 
-                @media screen and (max-width: 750px) {
+                @media screen and (max-width: $break-tablet) {
                     flex: 1 0 42%;
                 }
 
@@ -61,7 +61,7 @@
             }
 
             &__break {
-                @media screen and (max-width: 750px) {
+                @media screen and (max-width: $break-tablet) {
                     display: none;
                 }
             }

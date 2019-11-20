@@ -15,11 +15,15 @@
             align-items: center;
         }
 
+        @media screen and (max-width: $break-mobile) {
+            font-size: 12px;
+        }
+
         &__logo-container {
             flex: 1;
             cursor: pointer;
 
-            @media screen and (max-width: $break-mobile) {
+            @media screen and (max-width: $break-tablet) {
                 display: none;
             }
         }

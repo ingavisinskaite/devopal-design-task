@@ -29,7 +29,7 @@ const NEWSPHONES__news = () => {
   );
   return (
     <div className="NEWSPHONES__news">
-      <p>NAUJIENOS</p>
+      <p className="NEWSPHONES__news__title">NAUJIENOS</p>
       {post}
       {post}
     </div>

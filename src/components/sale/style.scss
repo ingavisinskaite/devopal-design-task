@@ -2,13 +2,22 @@
 
 .SALE {
     background-color: rgb(250, 250, 250);
-    margin: 20px 0;
+    margin: 20px 10px;
     padding: 10px 0;
 
     &__title {
         max-width: 1200px;
         margin: 10px 50px;
         color: red;
+        font-size: 1.5vw;
+
+        @media screen and (max-width: $break-tablet) {
+            font-size: 2.5vw;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            font-size: 3.5vw;
+        }
     }
 
     &__swiper {

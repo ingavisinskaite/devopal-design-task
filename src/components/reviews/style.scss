@@ -3,8 +3,15 @@
 .REVIEWS {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 50px;
+
+    @media screen and (max-width: $break-mobile) {
+        margin: 0 10px;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+        margin: 0 20px;
+    }
 
     &__container {
         display: flex;

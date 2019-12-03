@@ -2,12 +2,16 @@
 
 .HERO {
     display: flex;
-    margin: 10px auto;
     justify-content: center;
-    max-width: 1200px;
+    margin: 10px 50px;
 
     @media screen and (max-width: $break-tablet) {
         flex-direction: column;
+        margin: 10px 20px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin: 10px 10px
     }
 
     &__col-1 {

@@ -14,8 +14,11 @@
     }
 
     &__logo {
-      margin-left: 74px;
       margin-top: 10px;
+
+      @media screen and (max-width: $break-tablet) {
+        margin-left: 74px;
+      }
 
       img {
         width: 100%;
@@ -69,7 +72,6 @@
       display: flex;
       flex: 18;
       justify-content: space-evenly;
-      max-width: 1120px;
       margin: 0 auto;
 
       @media screen and (max-width: 1000px) {

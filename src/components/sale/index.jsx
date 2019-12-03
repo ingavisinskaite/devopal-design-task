@@ -32,10 +32,6 @@ const SaleSwiper = () => {
   const width = useWindowWidth();
   let reactSwipeEl;
 
-  React.useEffect(() => {
-    reactSwipeEl.swipe.setup();
-  }, [reactSwipeEl]);
-
   let sales = [
     {
       imgUrl: "hero4",
